@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Aroma Shop - Login</title>
-	<link rel="icon" href="img/Fevicon.png" type="image/png">
+  <title>Coffee Mood - Login</title>
+	<link rel="icon" href="img/Logo4.png" type="image/png">
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
@@ -23,7 +23,9 @@
     <div class="main_menu">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+          <a class="navbar-brand logo_h" href="index.html">
+            <img src="img/Logo3.png" alt="" width="200px">
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
@@ -32,42 +34,49 @@
           </button>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Shop</a>
-                <ul class="dropdown-menu">
+                  aria-expanded="false">About</a>
+                <!-- <ul class="dropdown-menu">
                   <li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-product.html">Blog Details</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
                   <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
                   <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
                   <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
-                </ul>
+                </ul> -->
 							</li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Blog</a>
+                  aria-expanded="false">Product</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+                  <li class="nav-item"><a class="nav-link" href="blog.html">coffee bean 咖啡豆</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-blog.html">coffee bean 咖啡</a></li>
+                  <li class="nav-item"><a class="nav-link" href="single-blog.html">customized coffee 客製咖啡</a></li>
                 </ul>
 							</li>
-							<li class="nav-item active submenu dropdown">
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+              <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>									
+                  aria-expanded="false">More Partners</a>
+                <!-- <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
                   <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
-                </ul>
+                </ul> -->
               </li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
-
             <ul class="nav-shop">
+              <li class="nav-item"><a href="login.html">Sign In</a></li>
               <li class="nav-item"><button><i class="ti-search"></i></button></li>
-              <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-              <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
+              <!-- 購物車數字需要從資料庫裡面撈取 -->
+              <li class="nav-item">
+                <button>
+                  <i class="ti-shopping-cart"></i>
+                  <span class="nav-shop__circle"></span> <!--從資料庫撈取購物車商品數量-->
+                </button>
+              </li>
+              <!-- <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li> -->
             </ul>
           </div>
         </div>
@@ -81,12 +90,12 @@
 		<div class="container h-100">
 			<div class="blog-banner">
 				<div class="text-center">
-					<h1>Register</h1>
+					<h1 style="text-align: left;padding-left: 5%;">Register</h1>
 					<nav aria-label="breadcrumb" class="banner-breadcrumb">
-            <ol class="breadcrumb">
+            <!-- <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">Register</li>
-            </ol>
+            </ol> -->
           </nav>
 				</div>
 			</div>
@@ -98,7 +107,7 @@
 	<section class="login_box_area section-margin">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6">
+				<!-- <div class="col-lg-6">
 					<div class="login_box_img">
 						<div class="hover">
 							<h4>Already have an account?</h4>
@@ -106,8 +115,8 @@
 							<a class="button button-account" href="login.html">Login Now</a>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-6">
+				</div> -->
+				<div class="col-lg-6" style="margin: 0px auto;">
 					<div class="login_form_inner register_form_inner">
 						<h3>Create an account</h3>
 						<form class="row login_form" action="#/" id="register_form" >
@@ -124,10 +133,24 @@
 								<input type="text" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'">
 							</div>
 							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="UserAddress" name="UserAddress" placeholder="Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'">
+							</div>
+							<div class="col-md-12 form-group">
+								<input type="text" class="form-control" id="UserPhone" name="UserPhone" placeholder="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'">
+							</div>
+							<!-- <div class="col-md-12 form-group">
 								<div class="creat_account">
 									<input type="checkbox" id="f-option2" name="selector">
 									<label for="f-option2">Keep me logged in</label>
 								</div>
+							</div> -->
+							<div class="col-md-12 form-group">
+								<p>請選擇您的身份</p>
+								<input type="radio" id="consumer" name="identity" value="consumer">
+								<label for="consumer">消費者</label>
+								<input class="radio-inline" type="radio" id="vendor" name="identity" value="vendor">
+								<label for="vendor">合作商家</label>
+								<!-- <input type="radio" class="form-control" id="consumer" name="identity" placeholder="Phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'"> -->
 							</div>
 							<div class="col-md-12 form-group">
 								<button type="submit" value="submit" class="button button-register w-100">Register</button>
