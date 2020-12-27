@@ -473,7 +473,7 @@
   </main>
 
 
-  <!--================ Start footer Area  =================-->	
+    <!--================ Start footer Area  =================-->	
 	<footer class="footer">
 		<div class="footer-area">
 			<div class="container">
