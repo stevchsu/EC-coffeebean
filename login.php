@@ -1,21 +1,21 @@
 <?php include("header.php"); ?>
 	<!--================ End Header Menu Area =================-->
 
-  <!-- ================ start banner area ================= -->	
+  	<!-- ================ start banner area ================= -->	
 	<section class="blog-banner-area" id="category">
 		<div class="container h-100">
 			<div class="blog-banner">
 				<div class="text-center">
 					<h1 style="text-align: left;padding-left: 5%;">Login</h1>
 					<nav aria-label="breadcrumb" class="banner-breadcrumb">
-            <!-- <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Login/Register</li>
-            </ol> -->
-          </nav>
+            			<!-- <ol class="breadcrumb">
+              				<li class="breadcrumb-item"><a href="#">Home</a></li>
+              				<li class="breadcrumb-item active" aria-current="page">Login/Register</li>
+            			</ol> -->
+          			</nav>
 				</div>
 			</div>
-    </div>
+    	</div>
 	</section>
 	<!-- ================ end banner area ================= -->
   
@@ -46,10 +46,10 @@
 								<div class="creat_account">
 									<input type="checkbox" id="f-option2" name="selector">
 									<label for="f-option2">Keep me logged in</label>
-                </div>
-                <div >
-                  <a class="button button-account" href="register.html">Register</a>
-                </div>
+                				</div>
+                				<div >
+                  					<a class="button button-account" href="register.html">Register</a>
+                				</div>
 							</div>
 							<div class="col-md-12 form-group">
 								<button type="submit" value="submit" class="button button-login w-100">Log In</button>
