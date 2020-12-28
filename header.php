@@ -1,9 +1,9 @@
 <?php session_start(); ?> <!--先開啟session-->
 <?php
-//首先在這裡寫好相關的呼叫程式碼
+//首先在這裡寫好相關的呼叫程式碼 
 function checksignin(){ //確認是否有登入
   if(empty($_SESSION["username"])){ //如果沒有登入則顯示這行html 若顯示會員名稱
-      echo '<li class="nav-item"><a href="login.html">Sign In</a></li>';
+      echo '<li class="nav-item"><a href="login.html">登入</a></li>';
   }else{  //有登入會員的位置
     //要區分使用者是顧客還是店家
     if($_SESSION["identity"]==1){
@@ -11,7 +11,7 @@ function checksignin(){ //確認是否有登入
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">'.$_SESSION["username"].'你好</a>
                 <ul class="dropdown-menu">
-                <li class="nav-item"><a class="nav-link" href="create_product.php">我的賣場</a></li>
+                <li class="nav-item"><a class="nav-link" href="market_management.php">我的賣場</a></li>
                   <li class="nav-item"><a class="nav-link" href="membership.php">會員中心</a></li>
                   <li class="nav-item"><a class="nav-link" href="logout.php">登出</a></li>
                 </ul>
@@ -54,7 +54,7 @@ function checksignin(){ //確認是否有登入
     <div class="main_menu">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a class="navbar-brand logo_h" href="index.html">
+          <a class="navbar-brand logo_h" href="index.php">
             <img src="img/Logo3.png" alt="" width="200px">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -65,10 +65,10 @@ function checksignin(){ //確認是否有登入
           </button>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item active"><a class="nav-link" href="index.php">首頁</a></li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">About</a>
+                  aria-expanded="false">關於我們</a>
                 <!-- <ul class="dropdown-menu">
                   <li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
                   <li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
@@ -79,22 +79,17 @@ function checksignin(){ //確認是否有登入
 							</li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Product</a>
+                  aria-expanded="false">商品種類</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="blog.html">coffee bean 咖啡豆</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-blog.html">coffee bean 咖啡</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-blog.html">customized coffee 客製咖啡</a></li>
+                  <li class="nav-item"><a class="nav-link" href="mall_bean.php">咖啡豆</a></li>
+                  <li class="nav-item"><a class="nav-link" href="mall_bag.php">濾掛包</a></li>
+                  <li class="nav-item"><a class="nav-link" href="mall_shop.php">咖啡店</a></li>
                 </ul>
 							</li>
-              <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.php">聯絡我們</a></li>
               <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                <a href="ourPartner.php" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">More Partners</a>
-                <!-- <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
-                </ul> -->
               </li>
             </ul>
             <ul class="nav-shop">

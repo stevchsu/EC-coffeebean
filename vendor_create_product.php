@@ -1,64 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Coffee Mood</title>
-	    <link rel="icon" href="img/Logo4.png" type="image/png">
-    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-	<link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!--================ Start Header Menu Area =================-->
-	<header class="header_area">
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <a class="navbar-brand logo_h" href="index.html">
-                        <img src="img/Logo3.png" alt="" width="200px">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <!-- <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                             <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="blog.html">coffee bean 咖啡豆</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="single-blog.html">coffee bean 咖啡</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="single-blog.html">customized coffee 客製咖啡</a></li>
-                                </ul>
-							</li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"aria-expanded="false">More Partners</a>
-                            </li>
-                        </ul> -->
-                        <ul class="nav-shop" style="margin-left: 80%;">
-                            <!-- 登入後改成 log out -->
-                            <li class="nav-item"><a href="#">登出</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+<?php include("header.php"); ?>
 	<!--================ End Header Menu Area =================-->
  
     <!-- ================ start banner area ================= -->	
@@ -80,13 +20,14 @@
                 <div class="col-lg-6">
 					<div class="login_box_img">
                         <div class="hover">
-                            <img id="preview_upload" src="img/home/coffeebean.jpeg" style="width:400px;" alt="預覽上傳圖片"/>
+                            <img id="preview_img" src="img/home/coffeebean.jpeg" style="width:400px;" alt="預覽上傳圖片"/>
                         </div>
 					</div>
 				</div>
 				<div class="col-lg-6" style=" max-width: 1080px; margin: auto;">
 					<div class="login_form_inner register_form_inner">
-						<form id="registrform" class="row login_form" method="post" action="create_product_process.php" style="max-width: 600px;">
+						<form  method="post" action="market_addproduct_process.php" style="max-width: 600px;" enctype="multipart/form-data">
+                                <!-- id="registrform" class="row login_form" -->
                             <table class="formTable">
                                 <tbody>
                                     <tr>
@@ -106,7 +47,7 @@
                                                 <th><label>產地</label></th>
                                                 <td>
                                                     <div class="col-md-12 form-group">
-                                                        <input type="text" class="form-control" name="product_origin" placeholder="產地" onfocus="this.placeholder = ''" onblur="this.placeholder = '產地'">
+                                                        <input type="text" class="form-control" name="product_place" placeholder="產地" onfocus="this.placeholder = ''" onblur="this.placeholder = '產地'">
                                                     </div>
                                                 </td>
                                             </tr>
@@ -122,10 +63,10 @@
                                                 <th><label>烘焙程度</label></th>
                                                 <td>
                                                     <div class="col-md-12 form-group">
-                                                        <select name="roast" id="roast">
-                                                            <option value="light">淺焙</option>
-                                                            <option value="medium">中焙</option>
-                                                            <option value="heavy">重焙</option>
+                                                        <select name="product_bake" id="roast">
+                                                            <option value="淺焙">淺焙</option>
+                                                            <option value="中焙">中焙</option>
+                                                            <option value="重焙">重焙</option>
                                                         </select>
                                                     </div>
                                                 </td>
@@ -149,12 +90,12 @@
                                             <tr>
                                                 <th><p>商品種類</p></th>
                                                 <td style="text-align: left; padding-left: 5px;">
-                                                    <input type="radio" id="bean" name="product_type" value="bean">
+                                                    <input type="radio" id="bean" name="product_kind" value="coffeebean">
                                                     <label for="bean">咖啡豆</label><br>
-                                                    <input type="radio" id="bag" name="product_type" value="bag">
+                                                    <input type="radio" id="bag" name="product_kind" value="dripbagservice">
                                                     <label for="bag">濾掛包</label><br>
-                                                    <!-- <input type="radio" id="customization" name="product_type" value="customization">
-                                                    <label for="customization">客製化服務</label> -->
+                                                    <input type="radio" id="customization" name="product_kind" value="customeservice">
+                                                    <label for="customization">客製化服務</label>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -179,7 +120,7 @@
                                                 </th>
                                                 <td>
                                                     <div class="col-md-12 form-group">
-                                                        <input type="file" name="product_image" id="product_image" accept="image/jpeg, image/png"/>
+                                                        <input id ="product_img" name="product_img" type="file" accept="image/gif, image/jpeg, image/png"> 
                                                     </div>
                                                 </td>
                                             </tr>
@@ -303,4 +244,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="vendors/mail-script.js"></script>
   <script src="js/main.js"></script>
   <script type="text/javascript">
+    $("#product_img").change(function(){
+    //預覽圖片功能
+    readURL(this);   // this代表<input id="imgInp">
+    });
+    function readURL(input){
+      if(input.files && input.files[0]){ //判斷是否有上傳檔案
+        var reader = new FileReader(); //讀檔
+        reader.onload = function (e) {   //讀出檔案去改變preview裡src屬性 完成預覽圖片
+           $("#preview_img").attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
   </script>

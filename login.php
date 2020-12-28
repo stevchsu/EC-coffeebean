@@ -6,7 +6,7 @@
 		<div class="container h-100">
 			<div class="blog-banner">
 				<div class="text-center">
-					<h1 style="text-align: left;padding-left: 5%;">Login</h1>
+					<h1 style="text-align: left;padding-left: 5%;">登入</h1>
 					<nav aria-label="breadcrumb" class="banner-breadcrumb">
             			<!-- <ol class="breadcrumb">
               				<li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -48,7 +48,7 @@
 									<label for="f-option2">Keep me logged in</label>
                 				</div>
                 				<div >
-                  					<a class="button button-account" href="register.html">Register</a>
+                  					<a class="button button-account" href="register.html">註冊新帳號</a>
                 				</div>
 							</div>
 							<div class="col-md-12 form-group">
